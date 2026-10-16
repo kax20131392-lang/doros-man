@@ -176,7 +176,8 @@ def init_db():
         """)
 
 
-init_db()SHELL = """
+init_db()
+SHELL = """
 <!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ title }} | دروس من</title>
@@ -500,7 +501,8 @@ def login():
 @app.route("/logout")
 def logout():
     session.clear()
-    return redirect(url_for("index"))@app.route("/home")
+    return redirect(url_for("index"))
+  @app.route("/home")
 @login_required
 def home():
     u = current_user()
